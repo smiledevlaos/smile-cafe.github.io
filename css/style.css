@@ -1,0 +1,2353 @@
+/* general settting */
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.container{
+	max-width: 1281px;
+	margin: 0 auto;
+	overflow-x: hidden;
+}
+
+body{
+	
+}
+
+
+
+/* navigation top */
+.navigation-top{
+	position: fixed;
+	top: 0;left: 0;right: 0;
+	background: #fff;
+	height: 40px;
+	z-index: 100;
+}
+
+.navigation-top .container{
+	display: flex;
+}
+
+.navigation-top .contact-top{
+	list-style: none;
+	display: flex;
+	flex: 1;
+}
+
+.navigation-top .contact-top li a{
+	font-family: 'tahoma';
+	line-height: 40px;
+	text-decoration: none;
+	font-size: 14px;
+	color: #333;
+	padding-left: 10px;
+}
+
+.navigation-top .contact-top li a i{
+	color: #ff99cc;
+}
+
+.navigation-top .contact-top li:nth-child(2){
+	padding-left: 20px;
+}
+
+.navigation-top .detial{
+	display: flex;
+	list-style: none;
+}
+
+.navigation-top .detial li a{
+	font-family: 'tahoma';
+	line-height: 40px;
+	text-decoration: none;
+	font-size: 14px;
+	color: #333;
+}
+
+.navigation-top .detial li:nth-child(2){
+	padding-right: 20px;
+}
+
+.navigation-top .detial li:nth-child(1){
+	padding-right: 20px;
+}
+
+.navigation-top .detial li a i{
+	color: #ff99cc;
+}
+
+/* end naviagtion top */
+
+
+
+
+/* navigation */
+
+.navigation{
+	position: fixed;
+	top: 40px;left: 0;right: 0;
+	background: #333;
+	height: 100px;
+	z-index: 100;
+	
+}
+
+.navigation .container{
+	display: flex;
+}
+
+.navigation .brand{
+	color: #fff;
+	text-decoration: none;
+	font-family: 'Great Vibes';
+	font-size: 50px;
+	flex: 1;
+	transition: .5s;
+	line-height: 110px;
+}
+
+.navigation .brand span{
+	color: #ff99cc;
+}
+
+.navigation .main-menu{
+	list-style: none;
+	display: flex;
+}
+
+.navigation .main-menu li{
+	line-height: 110px;
+}
+
+.navigation .main-menu li a{
+	color: #fff;
+	text-decoration: none;
+	font-family: 'tahoma';
+	font-size: 15px;
+	padding-left: 50px;
+	transition: .5s;
+}
+
+.navigation .main-menu li a:hover{
+	color: #ff99cc;
+}
+
+.navigation .main-menu li:hover > .sub-menu{
+	display: block;
+	animation: dropdown .5s;
+}
+
+@keyframes dropdown{
+	0%{
+		transform: translateY(100px);
+	}
+	100%{
+		transform: translateX(0px);
+	}
+}
+
+.navigation .main-menu li.active a{
+	color: #ff99cc;
+}
+
+/* end navigation */
+
+
+
+
+
+
+
+
+
+/* navigation sub menu */
+
+.navigation .main-menu .sub-menu{
+	position: absolute;
+	list-style: none;
+	background: #fff;
+	width: 200px;
+	top: 80%;
+	box-shadow: 0 2px 10px rgba(0,0,0,.6);
+	display: none;
+}
+
+.navigation .main-menu .sub-menu li{
+	border-top: 1px solid #3333;
+}
+
+.navigation .main-menu .sub-menu li:nth-child(1){
+	border-top: none;
+}
+
+.navigation .main-menu .sub-menu li a{
+	color: #333;
+	padding-left: 20px;
+	display: block;
+	line-height: 40px;
+	transition: .2s;
+}
+
+.navigation .main-menu .sub-menu li a:hover{
+	background: #ff99cc;
+	color: #fff;
+	padding-left: 35px;
+}
+
+/* end navigation sub menu */
+
+
+
+
+
+/* header banner */
+
+.header .banner{
+	position: relative;
+	margin-top: 140px;
+	background: url(../images/banner/bn.jpg);
+	width: 100%;
+	height:350px;
+	background-size: cover;
+	background-position: center;		
+}
+
+.header .banner::before{
+	content: '';
+	position: absolute;
+	top: 0;left: 0;right: 0;bottom: 0;
+	height: 350px;
+	background: linear-gradient(to top,#33ccff, #ff99cc);
+	opacity: 0.8;
+}
+
+.header .banner .title{
+	position: relative;
+	color: #fff;
+	text-align: center;
+	padding-top: 80px;
+}
+
+.header .banner .title h1{
+	font-family: 'Lobster Two';
+	font-size: 100px;
+}
+
+.header .banner .title p{
+	font-family: 'tahoma';
+	font-size: 20px;
+}
+
+/* end header banner */
+
+
+
+
+
+/* header options */
+
+.header .options{
+	background: #fff;
+}
+
+.header .options .option-1, .header .options .option-2,.header .options .option-3{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+}
+
+.header .options .container{
+	position: relative;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	padding: 50px 0;
+	grid-column-gap: 50px;
+}
+
+.header .options .option-1 .icon,.header .options .option-2 .icon,.header .options .option-3 .icon{
+	font-size: 50px;
+	color: #ff99cc;
+	text-align: center;
+	margin: 20px auto;
+}
+
+.header .options .option-1 .title h1,.header .options .option-2 .title h1,.header .options .option-3 .title h1{
+	font-family: 'Great Vibes';
+	padding-top: 20px;
+}
+
+.header .options .option-1 .title p,.header .options .option-2 .title p,.header .options .option-3 .title p{
+	font-family: 'tahoma';
+	padding-top: 12px;
+	font-weight: 100;
+}
+
+.header .options .option-1 .title a,.header .options .option-2 .title a,.header .options .option-3 .title a{
+	font-family: 'tahoma';
+}
+
+/* end header options */
+
+
+
+
+
+/* about us */
+
+.about-us{
+	position: relative;
+	background: #ff99cc;
+	padding: 50px 0;
+}
+
+.about-us .container{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	grid-column-gap: 50px;
+}
+
+.about-us .img{
+	background: url(../images/about-us/pic1.jpg);
+	width: 100%;
+	height: 300px;
+	background-size: cover;
+	background-position: center;
+}
+
+.about-us .title h1{
+	font-family: 'lobster Two';
+	font-size: 80px;
+	color: #fff;
+}
+
+.about-us .title h2{
+	font-family: 'tahoma';
+	font-size: 20px;
+	padding-top: 20px;
+	padding-bottom: 10px;
+	color: #fff;
+}
+
+.about-us .title p{
+	font-family: 'tahoma';
+	font-size: 14px;
+	color: #fff;
+}
+
+/* end about us */
+
+
+
+
+
+
+/* our menu */
+
+.our-menu{
+	position: relative;
+	padding: 50px 0;
+}
+
+.our-menu .head-title h1{
+	text-align: center;
+	font-family: 'lobster Two';
+	font-size: 80px;
+}
+
+.our-menu .head-title p{
+	font-family: 'tahoma';
+	font-size: 16px;
+	text-align: center;
+	padding-bottom: 70px;
+}
+
+.our-menu .title-card{
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	grid-column-gap: 50px;
+}
+
+.our-menu .title-card .title h1{
+	font-family: 'Great Vibes';
+	color: #333;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+.our-menu .title-card .title p{
+	font-family: 'tahoma';
+	font-size: 15px;
+	padding-bottom: 10px;
+}
+
+.our-menu .title-card .title .price{
+	font-size: 18px;
+}
+
+.our-menu .title-card .card-1 .img{
+	background: url(../images/our-menu/pic1.jpg);
+	width: 100%;
+	height: 250px;
+	background-size: cover;
+	background-position: center;
+}
+
+.our-menu .title-card .card-2 .img{
+	background: url(../images/our-menu/pic2.jpg);
+	width: 100%;
+	height: 250px;
+	background-size: cover;
+	background-position: center;
+}
+
+.our-menu .title-card .card-3 .img{
+	background: url(../images/our-menu/pic3.jpg);
+	width: 100%;
+	height: 250px;
+	background-size: cover;
+	background-position: center;
+}
+
+.our-menu .title-card .card-4 .img{
+	background: url(../images/our-menu/pic4.jpg);
+	width: 100%;
+	height: 250px;
+	background-size: cover;
+	background-position: center;
+}
+
+/* end our menu */
+
+
+
+
+/* list desert */
+
+.list-desert{
+	background: #ff99cc;
+	padding: 50px 0;
+}
+
+.list-desert .container{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	grid-column-gap: 50px;
+}
+
+.list-desert .title{
+	color: #fff;
+}
+
+.list-desert .title .title-head{
+	font-family: 'Great Vibes';
+	font-size: 35px;
+}
+
+.list-desert .title .title-body h2{
+	font-family: 'tahoma';
+	font-size: 20px;
+}
+
+.list-desert .title .title-body p{
+	font-family: 'tahoma';
+	font-size: 16px;
+}
+
+.list-desert .title .title-body-1,.list-desert .title .title-body-2,.list-desert .title .title-body-3,.list-desert .title .title-body-4,.list-desert .title .title-body-5{
+	padding-bottom: 20px;
+}
+
+.list-desert .img{
+	background: url(../images/list-menu/desert.png);
+	width: 100%;
+	height: 500px;
+	background-size: cover;
+	background-position: center;
+	padding-top: 200px;
+}
+
+/* end list desert */
+
+
+
+
+/* list drinks */
+
+.list-drinks{
+	background: #fff;
+	padding: 50px 0;
+}
+
+.list-drinks .container{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	grid-column-gap: 50px;
+}
+
+.list-drinks .title{
+	color: #333;
+}
+
+.list-drinks .title .title-head{
+	font-family: 'Great Vibes';
+	font-size: 35px;
+}
+
+.list-drinks .title .title-body h2{
+	font-family: 'tahoma';
+	font-size: 20px;
+}
+
+.list-drinks .title .title-body p{
+	font-family: 'tahoma';
+	font-size: 16px;
+}
+
+.list-drinks .title .title-body-1,.list-drinks .title .title-body-2,.list-drinks .title .title-body-3,.list-drinks .title .title-body-4,.list-drinks .title .title-body-5{
+	padding-bottom: 20px;
+}
+
+.list-drinks .img{
+	background: url(../images/list-menu/drinks.png);
+	width: 100%;
+	height: 500px;
+	background-size: cover;
+	background-position: center;
+	padding-top: 200px;
+}
+
+/* end list drinks */
+
+
+
+
+
+/* menu-card */
+
+.card-menu{
+	position: relative;
+	background: #ff99cc;
+	padding: 50px 100px;
+}
+
+.card-menu .control{
+
+}
+
+.card-menu .control .prevBtn{
+	font-size: 50px;
+	color: #333;
+	text-decoration: none;
+	position: absolute;
+	left:4%;
+	top: 43%;
+	z-index: 1;
+}
+
+.card-menu .control .nextBtn{
+	font-size: 50px;
+	color: #333;
+	text-decoration: none;
+	position: absolute;
+	right: 4%;
+	top: 43%;
+	z-index: 1;
+}
+
+
+.card-menu .card-slick-1,
+.card-menu .card-slick-2,
+.card-menu .card-slick-3,
+.card-menu .card-slick-4,
+.card-menu .card-slick-5,
+.card-menu .card-slick-6{
+	background: #fff;
+	text-align: center;
+	padding: 10px 20px;
+	outline: none;
+	cursor: pointer;
+	margin: 0 5px;
+}
+
+.card-menu  .body h1{
+	font-size: 30px;
+	font-family: 'Great Vibes';
+	padding: 10px 0;
+}
+
+.card-menu  .body p{
+	font-family: 'tahoma';
+	font-weight: 100;
+	color: #888;
+	font-size: 14px;
+	padding-bottom: 20px;
+}
+
+.card-menu .card-slick-1 .head{
+	background: url(../images/card-menu/pic1.jpg);
+	width: 100%;
+	height: 200px;
+	background-size: cover;
+	background-position: center;
+}
+
+.card-menu .card-slick-2 .head{
+	background: url(../images/card-menu/pic2.jpg);
+	width: 100%;
+	height: 200px;
+	background-size: cover;
+	background-position: center;
+}
+
+.card-menu .card-slick-3 .head{
+	background: url(../images/card-menu/pic3.jpg);
+	width: 100%;
+	height: 200px;
+	background-size: cover;
+	background-position: center;
+}
+
+.card-menu .card-slick-4 .head{
+	background: url(../images/card-menu/pic4.jpg);
+	width: 100%;
+	height: 200px;
+	background-size: cover;
+	background-position: center;
+}
+
+.card-menu .card-slick-5 .head{
+	background: url(../images/card-menu/pic5.jpg);
+	width: 100%;
+	height: 200px;
+	background-size: cover;
+	background-position: center;
+}
+
+.card-menu .card-slick-6 .head{
+	background: url(../images/card-menu/pic6.jpg);
+	width: 100%;
+	height: 200px;
+	background-size: cover;
+	background-position: center;
+}
+
+/* end menu card */
+
+
+
+
+
+/* gallary */
+.gallary{
+	background: #fff;
+	padding: 50px 105px;
+}
+
+.gallary .container{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-row-gap: 10px;
+	grid-column-gap: 10px;
+}
+
+.gallary .item-1{
+	background: url(../images/gallary/pic1.jpg);
+	width: 100%;
+	height: 250px;
+	background-size: 200%;
+	background-position: center;
+	border: 2px solid #fff;
+	transition: 1s;
+}
+
+.gallary .item-2{
+	background: url(../images/gallary/pic2.jpg);
+	width: 100%;
+	height: 250px;
+	background-size: 200%;
+	background-position: center;
+	border: 2px solid #fff;
+	transition: .5s;
+}
+
+.gallary .item-3{
+	background: url(../images/gallary/pic3.jpg);
+	width: 100%;
+	height: 250px;
+	background-size: 200%;
+	background-position: center;
+	border: 2px solid #fff;
+	transition: .5s;
+}
+
+.gallary .item-4{
+	background: url(../images/gallary/pic4.jpg);
+	width: 100%;
+	height: 250px;
+	background-size: 200%;
+	background-position: center;
+	border: 2px solid #fff;
+	transition: .5s;
+}
+
+.gallary .item-5{
+	background: url(../images/gallary/pic5.jpg);
+	width: 100%;
+	height: 250px;
+	background-size: 200%;
+	background-position: center;
+	border: 2px solid #fff;
+	transition: .5s;
+}
+
+.gallary .item-6{
+	background: url(../images/gallary/pic6.jpg);
+	width: 100%;
+	height: 250px;
+	background-size: 200%;
+	background-position: center;
+	border: 2px solid #fff;
+	transition: .5s;
+}
+
+.gallary .item-7{
+	background: url(../images/gallary/pic7.jpg);
+	width: 100%;
+	height: 250px;
+	background-size: 200%;
+	background-position: center;
+	border: 2px solid #fff;
+	transition: .5s;
+}
+
+.gallary .item-8{
+	background: url(../images/gallary/pic8.jpg);
+	width: 100%;
+	height: 250px;
+	background-size: 200%;
+	background-position: center;
+	border: 2px solid #fff;
+	transition: .5s;
+}
+
+.gallary .item-9{
+	background: url(../images/gallary/pic9.jpg);
+	width: 100%;
+	height: 250px;
+	background-size: 200%;
+	background-position: center;
+	border: 2px solid #fff;
+	transition: .5s;
+}
+
+.gallary .item-10{
+	background: url(../images/gallary/pic10.jpg);
+	width: 100%;
+	height: 250px;
+	background-size: 200%;
+	background-position: center;
+	border: 2px solid #fff;
+	transition: .5s;
+}
+
+.gallary .item-11{
+	background: url(../images/gallary/pic11.jpg);
+	width: 100%;
+	height: 250px;
+	background-size: 200%;
+	background-position: center;
+	border: 2px solid #fff;
+	transition: .5s;
+}
+
+.gallary .item-12{
+	background: url(../images/gallary/pic12.jpg);
+	width: 100%;
+	height: 250px;
+	background-size: 200%;
+	background-position: center;
+	border: 2px solid #fff;
+	transition: .5s;
+}
+
+.gallary .item-1:hover,
+.gallary .item-2:hover,
+.gallary .item-3:hover,
+.gallary .item-4:hover,
+.gallary .item-5:hover,
+.gallary .item-6:hover,
+.gallary .item-7:hover,
+.gallary .item-8:hover,
+.gallary .item-9:hover,
+.gallary .item-10:hover,
+.gallary .item-11:hover,
+.gallary .item-12:hover{
+	background-size: 300%;
+	transition: .5s all ease-in-out;
+}
+
+/* end gallary */
+
+
+
+
+
+/* contact */
+
+.contact{
+	position: relative;
+	padding: 50px 0;
+	background: #ff99cc;
+}
+
+.contact .title{
+	text-align: center;
+	color: #fff;
+}
+
+.contact .title h1{
+	font-family: 'Great Vibes';
+	font-size: 60px;
+}
+
+.contact .title p{
+	font-family: 'tahoma';
+	font-size: 14px;
+	padding-bottom: 50px;
+}
+
+.contact .form{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	grid-column-gap: 20px;
+	grid-row-gap: 10px;
+}
+
+.contact .form .name,
+.contact .form .email,
+.contact .form .subject{
+	border: 1px solid #3333;
+	padding: 20px 10px;
+	outline: none;
+	font-size: 14px;
+}
+
+.contact .form .subject{
+	grid-column: 1 / span 2;
+}
+
+.contact .form .message{
+	grid-column: 1 / span 2;
+	height: 200px;
+	border: 1px solid #3333;
+	padding: 20px 10px;
+	outline: none;
+	font-size: 14px;
+}
+
+.contact .submit{
+	position: relative;
+	background: #fff;
+	padding: 15px 100px;
+	border: none;
+	outline: none;
+	border-radius: 50px;
+	cursor: pointer;
+	text-align: center;
+	margin: 20px 50%;
+	transform: translateX(-50%);
+	transition: .5s;
+	color: #ff99cc;
+}
+
+.contact .submit:hover{
+	background: #333;
+	color: #fff;
+}
+
+/* end contact */
+
+
+
+
+
+/* footer */
+.footer{
+	background: #333;
+	position: relative;
+	padding: 50px 0;
+	text-align: center;
+}
+
+.footer .title{
+	color: #fff;
+}
+
+.footer .title h1{
+	font-family: 'Great Vibes';
+	font-size: 50px;
+	color: #ff99cc;
+}
+
+.footer .title p{
+	font-family: 'tahoma';
+	font-size: 14px;
+	color: #fff;
+	padding-bottom: 50px;
+}
+
+.footer .social{
+	
+}
+
+.footer .social ul{
+	display: flex;
+	justify-content: center;
+	list-style: none;
+}
+
+.footer .social ul li a{
+	color: #fff;
+	font-size: 20px;
+	padding: 8px 11px;
+	border: 1px solid #3333;
+	background: #ff99cc;
+	border-radius: 50px;
+	margin: 0 5px;
+	transition: .5s;
+}
+
+.footer .social ul li a:hover{
+	background: #fff;
+	color: #ff99cc;
+}
+
+.footer .end-title{
+	padding-top: 50px;
+	color: #fff;
+}
+
+.footer .end-title h1{
+	font-family: 'tahoma';
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+
+.footer .end-title h1 span{
+	color: #ff99cc;
+}
+
+.footer .end-title p{
+	font-family: 'tahoma';
+	font-size: 14px;
+	padding-bottom: 10px;
+}
+
+
+
+
+/* navigation top  responsive*/
+.navigation-top-responsive{
+	position: fixed;
+	top: 0;left: 0;right: 0;
+	background: #fff;
+	height: 40px;
+	z-index: 100;
+	display: none;
+}
+
+.navigation-top-responsive .container{
+	display: flex;
+}
+
+.navigation-top-responsive .contact-top{
+	list-style: none;
+	display: flex;
+	flex: 1;
+}
+
+.navigation-top-responsive .contact-top li a{
+	font-family: 'tahoma';
+	line-height: 40px;
+	text-decoration: none;
+	font-size: 14px;
+	color: #333;
+	padding-left: 10px;
+}
+
+.navigation-top-responsive .contact-top li a i{
+	color: #ff99cc;
+}
+
+.navigation-top-responsive .contact-top li:nth-child(2){
+	padding-left: 20px;
+}
+
+.navigation-top-responsive .detial{
+	display: flex;
+	list-style: none;
+}
+
+.navigation-top-responsive .detial li a{
+	font-family: 'tahoma';
+	line-height: 40px;
+	text-decoration: none;
+	font-size: 14px;
+	color: #333;
+}
+
+.navigation-top-responsive .detial li:nth-child(2){
+	padding-right: 20px;
+}
+
+.navigation-top-responsive .detial li:nth-child(1){
+	padding-right: 20px;
+}
+
+.navigation-top-responsive .detial li a i{
+	color: #ff99cc;
+}
+
+/* end naviagtion top responsive */
+
+
+
+
+/* navigation responsive */
+
+.navigation-responsive{
+	position: fixed;
+	top: 40px;left: 0;right: 0;
+	background: #333;
+	height: 100px;
+	z-index: 100;
+	display: none;
+}
+
+.navigation-responsive .container{
+	display: flex;
+}
+
+.navigation-responsive .brand{
+	color: #fff;
+	text-decoration: none;
+	font-family: 'Great Vibes';
+	font-size: 50px;
+	flex: 1;
+	transition: .5s;
+	line-height: 110px;
+}
+
+.navigation-responsive .brand span{
+	color: #ff99cc;
+}
+
+.navigation-responsive .open-menu-responsive{
+	line-height: 110px;
+	color: #fff;
+	font-size: 35px;
+	transition: .5s;
+}
+
+.navigation-responsive .open-menu-responsive:hover{
+	color: #ff99cc;
+}
+
+/* end navigation responsive */
+
+
+
+
+
+
+/* menu responsive */ 
+.menu-responsive{
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background: #333;
+	width: 350px;
+	z-index: 1000000;
+	display: none;
+}
+
+.menu-responsive.active{
+	display: block;
+}
+
+.menu-responsive .main-menu{
+	list-style: none;
+}
+
+.menu-responsive .main-menu li .close-menu-responsive{
+	color: #fff;
+	font-size: 20px;
+	transition: .5s;
+	display: inline;
+	line-height: 70px;
+}
+
+.menu-responsive .main-menu li .close-menu-responsive:hover{
+	color: #ff99cc;
+	background: #333;
+}
+
+.menu-responsive .main-menu li a{
+	color: #fff;
+	text-decoration: none;
+	font-family: 'tahoma';
+	font-size: 13px;
+	display: block;
+	line-height: 40px;
+	padding-left: 30px;
+	transition: .5s;
+}
+
+.menu-responsive .main-menu li a:hover{
+	background: #555;
+}
+
+.menu-responsive .main-menu .sub-menu{
+	list-style: none;
+	position: relative;
+	left: 30px;
+	display: none;
+}
+
+.menu-responsive .main-menu .sub-menu.active{
+	display: block;
+}
+
+
+
+
+
+@media screen and (min-width: 1025px){
+	.menu-responsive.active{
+		display: none;
+	}
+}
+
+
+
+
+
+
+
+
+
+/* hi-res laptops and desktops */
+
+@media screen and (max-width: 1280px){
+
+	/* general */
+	.container{
+		max-width: 1025px;
+	}
+
+}
+
+/* end hi-res laptops and desktops */
+
+
+
+
+
+
+/* big landscape tablets, laptops, and desktops */
+
+@media screen and (max-width: 1024px){
+
+	/* general */
+	.container{
+		max-width: 769px;
+	}
+
+	/* navigation */
+	.navigation{
+		display: none;
+	}
+
+	/* navigation responsive*/
+	.navigation-responsive{
+		display: block;
+	}
+
+	/* banner */
+	.header .banner .title{
+		padding-top: 110px;
+	}
+
+	.header .banner .title h1{
+		font-size: 80px;
+	}
+
+	.header .banner .title p{
+		font-size: 16px;
+	}
+
+	/* about us */
+	.about-us .img{
+		height: 250px;
+	}
+
+	.about-us .title h1{
+		font-size: 60px;
+	}
+
+	.about-us .title h2{
+		font-size: 16px;
+	}
+
+	.about-us .title p{
+		font-size: 12px;
+	}
+
+	/* our menu */
+	.our-menu .head-title h1{
+		font-size: 60px;
+	}
+
+	.our-menu .head-title p{
+		font-size: 14px;
+	}
+
+	.our-menu .title-card{
+		grid-template-columns: repeat(2,1fr);
+	}
+
+	/* list desert */
+	.list-desert .title .title-head{
+		font-size: 25px;
+	}
+
+	.list-desert .title .title-body h2{
+		font-size: 18px;
+	}
+
+	.list-desert .title .title-body p{
+		font-size: 12px;
+	}
+
+	.list-desert .img{
+		height: 200px;
+		margin-top: 70px;
+	}
+
+	/* list drinks */
+	.list-drinks .title .title-head{
+		font-size: 25px;
+	}
+
+	.list-drinks .title .title-body h2{
+		font-size: 18px;
+	}
+
+	.list-drinks .title .title-body p{
+		font-size: 12px;
+	}
+
+	.list-drinks .img{
+		height: 200px;
+		margin-top: 70px;
+	}
+
+	/* gallary */
+	.gallary .container{
+		grid-template-columns: repeat(2,1fr);
+	}
+
+
+	/* contact */
+	.contact .title h1{
+		font-size: 60px;
+	}
+
+	.contact .title p{
+		font-size: 14px;
+	}
+
+	.contact .form{
+	display: grid;
+	grid-template-columns: repeat(2,1fr);
+	grid-column-gap: 20px;
+	grid-row-gap: 10px;
+	}
+
+	.contact .form .name,
+	.contact .form .email,
+	.contact .form .subject{
+		padding: 10px 10px;
+	}
+
+	.contact .form .subject{
+		grid-column: 1 / span 2;
+	}
+
+	.contact .form .message{
+		height: 150px;
+	}
+
+	.contact .submit{
+		padding: 15px 80px;
+	}
+
+	/* footer */
+	.footer{
+		padding: 50px 50px;
+	}
+
+	.footer .title h1{
+		font-family: 'Great Vibes';
+		font-size: 40px;
+		color: #ff99cc;
+	}
+
+	.footer .title p{
+		font-size: 12px;
+		padding-bottom: 50px;
+	}
+
+	.footer .social{
+		
+	}
+
+	.footer .social ul{
+		display: flex;
+		justify-content: center;
+		list-style: none;
+	}
+
+	.footer .social ul li a{
+		color: #fff;
+		font-size: 20px;
+		padding: 8px 11px;
+		border: 1px solid #3333;
+		background: #ff99cc;
+		border-radius: 50px;
+		margin: 0 5px;
+		transition: .5s;
+	}
+
+	.footer .social ul li a:hover{
+		background: #fff;
+		color: #ff99cc;
+	}
+
+	.footer .end-title{
+		padding-top: 50px;
+		color: #fff;
+	}
+
+	.footer .end-title h1{
+		font-family: 'tahoma';
+		font-size: 18px;
+		padding-bottom: 10px;
+	}
+
+	.footer .end-title h1 span{
+		color: #ff99cc;
+	}
+
+	.footer .end-title p{
+		font-family: 'tahoma';
+		font-size: 12px;
+		padding-bottom: 10px;
+	}
+}
+
+/* end big landscape tablets, laptops, and desktops */
+
+
+
+
+
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+
+@media screen and (max-width: 768px){
+
+	/* general */
+	.container{
+		max-width: 481px;
+	}
+
+	/* navigation-top */
+	.navigation-top{
+		display: none;
+	}
+
+	/* navigation responsive*/
+	.navigation-responsive{
+		padding: 0 50px;
+	}
+
+	/* navigation top responsive */
+	.navigation-top-responsive{
+		display: block;
+		padding: 0 50px;
+	}
+
+	/* banner */
+	.header .banner{
+		height: 300px;
+	}
+
+	.header .banner::before{
+		height: 300px;
+	}
+
+	.header .banner .title{
+		padding-top: 120px;
+	}
+
+	.header .banner .title h1{
+		font-size: 50px;
+	}
+
+	.header .banner .title p{
+		font-size: 13px;
+	}
+
+	/* header optoin */
+	.header .options .container{
+		grid-template-columns: 1fr;
+	}
+
+	/* about us */
+	.about-us{
+		padding: 50px 50px;
+	}
+
+	.about-us .container{
+		grid-template-columns: 1fr;
+	}
+
+	.about-us .title{
+		padding-top: 20px;
+	}
+
+	/* our menu */
+	.our-menu {
+		padding: 50px 50px;
+	}
+
+	.our-menu .title-card{
+		grid-template-columns: 1fr;
+	}
+
+	/* list desert */
+	.list-desert .container{
+		grid-template-columns: 1fr;
+	}
+
+	.list-desert .title{
+		text-align: center;
+	}
+
+	/* list drinks */
+	.list-drinks .container{
+		grid-template-columns: 1fr;
+	}
+
+	.list-drinks .title{
+		text-align: center;
+	}
+
+	/* gallary */
+	.gallary{
+		padding: 50px 50px;
+	}
+
+	.gallary .container{
+		grid-template-columns: 1fr;
+	}
+
+	/* contact */
+	.contact{
+		padding: 50px 50px;
+	}
+
+	.contact .form{
+	grid-template-columns: 1fr;
+	}
+
+	.contact .form .name,
+	.contact .form .email,
+	.contact .form .subject{
+		padding: 5px 10px;
+	}
+
+	.contact .form .message{
+		height: 150px;
+		padding: 20px 10px;
+	}
+
+	.contact .submit{
+		padding: 10px 80px;
+	}
+
+	.menu-responsive{
+		width: 250px;
+	}
+
+
+}
+
+/* end tablet, landscape iPad, lo-res laptops ands desktops */
+
+
+
+
+
+/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+
+@media screen and (max-width: 480px){
+
+	/* general */
+	.container{
+		max-width: 320px;
+	}
+
+	/* navigation responsive */
+	.navigation-responsive .brand{
+		font-size: 40px;
+	}
+
+	/* card menu */
+	.card-slick .card-slick-1 .head,
+	.card-slick .card-slick-2 .head,
+	.card-slick .card-slick-3 .head,
+	.card-slick .card-slick-4 .head,
+	.card-slick .card-slick-5 .head,
+	.card-slick .card-slick-6 .head,
+	.card-slick .card-slick-7 .head,
+	.card-slick .card-slick-8 .head,
+	.card-slick .card-slick-9 .head,
+	.card-slick .card-slick-10 .head,
+	.card-slick .card-slick-11 .head,
+	.card-slick .card-slick-12 .head{
+		height: 100px;
+	}
+
+	.card-slick .card-slick-1 h1,
+	.card-slick .card-slick-2 h1,
+	.card-slick .card-slick-3 h1,
+	.card-slick .card-slick-4 h1,
+	.card-slick .card-slick-5 h1,
+	.card-slick .card-slick-6 h1,
+	.card-slick .card-slick-7 h1,
+	.card-slick .card-slick-8 h1,
+	.card-slick .card-slick-9 h1,
+	.card-slick .card-slick-10 h1,
+	.card-slick .card-slick-11 h1,
+	.card-slick .card-slick-12 h1{
+		font-size: 22px;
+	}
+
+	.card-slick .card-slick-1 p,
+	.card-slick .card-slick-2 p,
+	.card-slick .card-slick-3 p,
+	.card-slick .card-slick-4 p,
+	.card-slick .card-slick-5 p,
+	.card-slick .card-slick-6 p,
+	.card-slick .card-slick-7 p,
+	.card-slick .card-slick-8 p,
+	.card-slick .card-slick-9 p,
+	.card-slick .card-slick-10 p,
+	.card-slick .card-slick-11 p,
+	.card-slick .card-slick-12 p{
+		font-size: 12px;
+	}
+
+	/* banner */
+	.header .banner{
+		height: 270px;
+	}
+
+	.header .banner::before{
+		height: 270px;
+	}
+
+	.header .banner .title{
+		padding-top: 60px;
+	}
+
+	.header .banner .title h1{
+		font-size: 50px;
+	}
+
+	.header .banner .title p{
+		font-size: 13px;
+	}
+}
+
+/* end portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+
+
+
+
+/* ice cream menu */
+
+.ice-cream-menu{
+	margin-top: 140px;
+}
+
+.ice-cream-menu .title{
+	text-align: center;
+	padding: 50px 50px;
+}
+
+.ice-cream-menu .title h1{
+	font-family: 'Great Vibes';
+	font-size: 60px;
+}
+
+.ice-cream-menu .title p{
+	font-family: 'tahoma';
+	font-size: 14px;
+}
+
+.ice-cream-menu .controller{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+.ice-cream-menu .controller div{
+	text-decoration: none;
+	color: #fff;
+	background: #ff99cc;
+	font-family: 'tahoma';
+	font-size: 14px;
+	margin: 0 5px;
+	width: 100px;
+	cursor: pointer;
+	padding: 10px 0;
+	border: 1px solid #3333;
+	transition: .5s;
+}
+
+.ice-cream-menu .controller div:hover{
+	background: #333;
+}
+
+.ice-cream-menu .menu{
+	padding: 50px 50px;
+	display: grid;
+	grid-template-columns: repeat(6,1fr);
+	grid-gap: 30px 30px;
+}
+
+@media screen and (max-width: 1023px){
+	.ice-cream-menu .menu{
+		grid-template-columns: repeat(3,1fr);
+	}
+}
+
+@media screen and (max-width: 768px){
+	.ice-cream-menu .menu{
+		grid-template-columns: repeat(1,1fr);
+	}
+}
+
+
+
+
+.ice-cream-menu .menu .menu-ice-cream-1,
+.ice-cream-menu .menu .menu-ice-cream-2,
+.ice-cream-menu .menu .menu-ice-cream-3,
+.ice-cream-menu .menu .menu-ice-cream-4,
+.ice-cream-menu .menu .menu-ice-cream-5,
+.ice-cream-menu .menu .menu-ice-cream-6,
+.ice-cream-menu .menu .menu-ice-cream-7,
+.ice-cream-menu .menu .menu-ice-cream-8,
+.ice-cream-menu .menu .menu-ice-cream-9,
+.ice-cream-menu .menu .menu-ice-cream-10,
+.ice-cream-menu .menu .menu-ice-cream-11,
+.ice-cream-menu .menu .menu-ice-cream-12,
+.ice-cream-menu .menu .menu-ice-cream-13,
+.ice-cream-menu .menu .menu-ice-cream-14,
+.ice-cream-menu .menu .menu-ice-cream-15,
+.ice-cream-menu .menu .menu-ice-cream-16,
+.ice-cream-menu .menu .menu-ice-cream-17,
+.ice-cream-menu .menu .menu-ice-cream-18{
+	box-shadow: 0 2px 5px rgba(0,0,0,.3);
+	cursor: pointer;
+	transition: .5s;
+}
+
+.ice-cream-menu .menu .menu-ice-cream-1:hover,
+.ice-cream-menu .menu .menu-ice-cream-2:hover,
+.ice-cream-menu .menu .menu-ice-cream-3:hover,
+.ice-cream-menu .menu .menu-ice-cream-4:hover,
+.ice-cream-menu .menu .menu-ice-cream-5:hover,
+.ice-cream-menu .menu .menu-ice-cream-6:hover,
+.ice-cream-menu .menu .menu-ice-cream-7:hover,
+.ice-cream-menu .menu .menu-ice-cream-8:hover,
+.ice-cream-menu .menu .menu-ice-cream-9:hover,
+.ice-cream-menu .menu .menu-ice-cream-10:hover,
+.ice-cream-menu .menu .menu-ice-cream-11:hover,
+.ice-cream-menu .menu .menu-ice-cream-12:hover,
+.ice-cream-menu .menu .menu-ice-cream-13:hover,
+.ice-cream-menu .menu .menu-ice-cream-14:hover,
+.ice-cream-menu .menu .menu-ice-cream-15:hover,
+.ice-cream-menu .menu .menu-ice-cream-16:hover,
+.ice-cream-menu .menu .menu-ice-cream-17:hover,
+.ice-cream-menu .menu .menu-ice-cream-18:hover{
+	box-shadow: 0 5px 50px rgba(0,0,0,.3);
+}
+
+
+
+.ice-cream-menu .menu .menu-ice-cream-1 .name,
+.ice-cream-menu .menu .menu-ice-cream-2 .name,
+.ice-cream-menu .menu .menu-ice-cream-3 .name,
+.ice-cream-menu .menu .menu-ice-cream-4 .name,
+.ice-cream-menu .menu .menu-ice-cream-5 .name,
+.ice-cream-menu .menu .menu-ice-cream-6 .name,
+.ice-cream-menu .menu .menu-ice-cream-7 .name,
+.ice-cream-menu .menu .menu-ice-cream-8 .name,
+.ice-cream-menu .menu .menu-ice-cream-9 .name,
+.ice-cream-menu .menu .menu-ice-cream-10 .name,
+.ice-cream-menu .menu .menu-ice-cream-11 .name,
+.ice-cream-menu .menu .menu-ice-cream-12 .name,
+.ice-cream-menu .menu .menu-ice-cream-13 .name,
+.ice-cream-menu .menu .menu-ice-cream-14 .name,
+.ice-cream-menu .menu .menu-ice-cream-15 .name,
+.ice-cream-menu .menu .menu-ice-cream-16 .name,
+.ice-cream-menu .menu .menu-ice-cream-17 .name,
+.ice-cream-menu .menu .menu-ice-cream-18 .name{
+	padding: 20px 20px;
+	text-align: center;
+	background: #fff;
+}
+
+.ice-cream-menu .menu .menu-ice-cream-1 .name h1,
+.ice-cream-menu .menu .menu-ice-cream-2 .name h1,
+.ice-cream-menu .menu .menu-ice-cream-3 .name h1,
+.ice-cream-menu .menu .menu-ice-cream-4 .name h1,
+.ice-cream-menu .menu .menu-ice-cream-5 .name h1,
+.ice-cream-menu .menu .menu-ice-cream-6 .name h1,
+.ice-cream-menu .menu .menu-ice-cream-7 .name h1,
+.ice-cream-menu .menu .menu-ice-cream-8 .name h1,
+.ice-cream-menu .menu .menu-ice-cream-9 .name h1,
+.ice-cream-menu .menu .menu-ice-cream-10 .name h1,
+.ice-cream-menu .menu .menu-ice-cream-11 .name h1,
+.ice-cream-menu .menu .menu-ice-cream-12 .name h1,
+.ice-cream-menu .menu .menu-ice-cream-13 .name h1,
+.ice-cream-menu .menu .menu-ice-cream-14 .name h1,
+.ice-cream-menu .menu .menu-ice-cream-15 .name h1,
+.ice-cream-menu .menu .menu-ice-cream-16 .name h1,
+.ice-cream-menu .menu .menu-ice-cream-17 .name h1,
+.ice-cream-menu .menu .menu-ice-cream-18 .name h1{
+	font-family: 'Great Vibes';
+	font-size: 20px;
+}
+
+.ice-cream-menu .menu .menu-ice-cream-1 .name p,
+.ice-cream-menu .menu .menu-ice-cream-2 .name p,
+.ice-cream-menu .menu .menu-ice-cream-3 .name p,
+.ice-cream-menu .menu .menu-ice-cream-4 .name p,
+.ice-cream-menu .menu .menu-ice-cream-5 .name p,
+.ice-cream-menu .menu .menu-ice-cream-6 .name p,
+.ice-cream-menu .menu .menu-ice-cream-7 .name p,
+.ice-cream-menu .menu .menu-ice-cream-8 .name p,
+.ice-cream-menu .menu .menu-ice-cream-9 .name p,
+.ice-cream-menu .menu .menu-ice-cream-10 .name p,
+.ice-cream-menu .menu .menu-ice-cream-11 .name p,
+.ice-cream-menu .menu .menu-ice-cream-12 .name p,
+.ice-cream-menu .menu .menu-ice-cream-13 .name p,
+.ice-cream-menu .menu .menu-ice-cream-14 .name p,
+.ice-cream-menu .menu .menu-ice-cream-15 .name p,
+.ice-cream-menu .menu .menu-ice-cream-16 .name p,
+.ice-cream-menu .menu .menu-ice-cream-17 .name p,
+.ice-cream-menu .menu .menu-ice-cream-18 .name p{
+	font-family: 'tahoma';
+	font-size: 14px;
+	color: #ff99cc;
+}
+
+
+
+
+
+
+.ice-cream-menu .menu .menu-ice-cream-1 .img{
+	background: url(../images/ice-cream-menu/cherry/1.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+
+.ice-cream-menu .menu .menu-ice-cream-2 .img{
+	background: url(../images/ice-cream-menu/cherry/2.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+.ice-cream-menu .menu .menu-ice-cream-3 .img{
+	background: url(../images/ice-cream-menu/cherry/3.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+.ice-cream-menu .menu .menu-ice-cream-4 .img{
+	background: url(../images/ice-cream-menu/cherry/4.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+.ice-cream-menu .menu .menu-ice-cream-5 .img{
+	background: url(../images/ice-cream-menu/cherry/5.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+
+.ice-cream-menu .menu .menu-ice-cream-6 .img{
+	background: url(../images/ice-cream-menu/cherry/6.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+
+.ice-cream-menu .menu .menu-ice-cream-7 .img{
+	background: url(../images/ice-cream-menu/chocolate/1.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+.ice-cream-menu .menu .menu-ice-cream-8 .img{
+	background: url(../images/ice-cream-menu/chocolate/2.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+.ice-cream-menu .menu .menu-ice-cream-9 .img{
+	background: url(../images/ice-cream-menu/chocolate/3.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+.ice-cream-menu .menu .menu-ice-cream-10 .img{
+	background: url(../images/ice-cream-menu/chocolate/4.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+
+.ice-cream-menu .menu .menu-ice-cream-11 .img{
+	background: url(../images/ice-cream-menu/chocolate/5.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+
+.ice-cream-menu .menu .menu-ice-cream-12 .img{
+	background: url(../images/ice-cream-menu/chocolate/6.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+
+.ice-cream-menu .menu .menu-ice-cream-13 .img{
+	background: url(../images/ice-cream-menu/vanilla/1.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+.ice-cream-menu .menu .menu-ice-cream-14 .img{
+	background: url(../images/ice-cream-menu/vanilla/2.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+.ice-cream-menu .menu .menu-ice-cream-15 .img{
+	background: url(../images/ice-cream-menu/vanilla/3.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+.ice-cream-menu .menu .menu-ice-cream-16 .img{
+	background: url(../images/ice-cream-menu/vanilla/4.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+
+.ice-cream-menu .menu .menu-ice-cream-17 .img{
+	background: url(../images/ice-cream-menu/vanilla/5.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+
+.ice-cream-menu .menu .menu-ice-cream-18 .img{
+	background: url(../images/ice-cream-menu/vanilla/6.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+
+/* end ice cream menu */
+
+
+
+
+
+/* cake menu */
+
+.cake-menu{
+	margin-top: 140px;
+}
+
+.cake-menu .title{
+	text-align: center;
+	padding: 50px 50px;
+}
+
+.cake-menu .title h1{
+	font-family: 'Great Vibes';
+	font-size: 60px;
+}
+
+.cake-menu .title p{
+	font-family: 'tahoma';
+	font-size: 14px;
+}
+
+.cake-menu .controller{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+.cake-menu .controller div{
+	text-decoration: none;
+	color: #fff;
+	background: #ff99cc;
+	font-family: 'tahoma';
+	font-size: 14px;
+	margin: 0 5px;
+	width: 100px;
+	cursor: pointer;
+	padding: 10px 0;
+	border: 1px solid #3333;
+	transition: .5s;
+}
+
+.cake-menu .controller div:hover{
+	background: #333;
+}
+
+.cake-menu .menu{
+	padding: 50px 50px;
+	display: grid;
+	grid-template-columns: repeat(6,1fr);
+	grid-gap: 30px 30px;
+}
+
+@media screen and (max-width: 1023px){
+	.cake-menu .menu{
+		grid-template-columns: repeat(3,1fr);
+	}
+}
+
+@media screen and (max-width: 768px){
+	.cake-menu .menu{
+		grid-template-columns: repeat(1,1fr);
+	}
+}
+
+
+
+
+
+.cake-menu .menu .menu-cake-1,
+.cake-menu .menu .menu-cake-2,
+.cake-menu .menu .menu-cake-3,
+.cake-menu .menu .menu-cake-4,
+.cake-menu .menu .menu-cake-5,
+.cake-menu .menu .menu-cake-6,
+.cake-menu .menu .menu-cake-7,
+.cake-menu .menu .menu-cake-8{
+	box-shadow: 0 2px 5px rgba(0,0,0,.3);
+	cursor: pointer;
+	transition: .5s;
+}
+
+.cake-menu .menu .menu-cake-1:hover,
+.cake-menu .menu .menu-cake-2:hover,
+.cake-menu .menu .menu-cake-3:hover,
+.cake-menu .menu .menu-cake-4:hover,
+.cake-menu .menu .menu-cake-5:hover,
+.cake-menu .menu .menu-cake-6:hover,
+.cake-menu .menu .menu-cake-7:hover,
+.cake-menu .menu .menu-cake-8:hover{
+	box-shadow: 0 5px 50px rgba(0,0,0,.3);
+}
+
+
+
+.cake-menu .menu .menu-cake-1 .name,
+.cake-menu .menu .menu-cake-2 .name,
+.cake-menu .menu .menu-cake-3 .name,
+.cake-menu .menu .menu-cake-4 .name,
+.cake-menu .menu .menu-cake-5 .name,
+.cake-menu .menu .menu-cake-6 .name,
+.cake-menu .menu .menu-cake-7 .name,
+.cake-menu .menu .menu-cake-8 .name{
+	padding: 20px 20px;
+	text-align: center;
+	background: #fff;
+}
+
+.cake-menu .menu .menu-cake-1 .name h1,
+.cake-menu .menu .menu-cake-2 .name h1,
+.cake-menu .menu .menu-cake-3 .name h1,
+.cake-menu .menu .menu-cake-4 .name h1,
+.cake-menu .menu .menu-cake-5 .name h1,
+.cake-menu .menu .menu-cake-6 .name h1,
+.cake-menu .menu .menu-cake-7 .name h1,
+.cake-menu .menu .menu-cake-8 .name h1{
+	font-family: 'Great Vibes';
+	font-size: 20px;
+}
+
+.cake-menu .menu .menu-cake-1 .name p,
+.cake-menu .menu .menu-cake-2 .name p,
+.cake-menu .menu .menu-cake-3 .name p,
+.cake-menu .menu .menu-cake-4 .name p,
+.cake-menu .menu .menu-cake-5 .name p,
+.cake-menu .menu .menu-cake-6 .name p,
+.cake-menu .menu .menu-cake-7 .name p,
+.cake-menu .menu .menu-cake-8 .name p{
+	font-family: 'tahoma';
+	font-size: 14px;
+	color: #ff99cc;
+}
+
+
+
+
+
+
+.cake-menu .menu .menu-cake-1 .img{
+	background: url(../images/cake-menu/wedding/1.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+.cake-menu .menu .menu-cake-2 .img{
+	background: url(../images/cake-menu/wedding/2.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+.cake-menu .menu .menu-cake-3 .img{
+	background: url(../images/cake-menu/wedding/3.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+.cake-menu .menu .menu-cake-4 .img{
+	background: url(../images/cake-menu/wedding/4.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+
+.cake-menu .menu .menu-cake-5 .img{
+	background: url(../images/cake-menu/wedding/5.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+
+.cake-menu .menu .menu-cake-6 .img{
+	background: url(../images/cake-menu/beautiful/1.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+.cake-menu .menu .menu-cake-7 .img{
+	background: url(../images/cake-menu/beautiful/1.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+.cake-menu .menu .menu-cake-8 .img{
+	background: url(../images/cake-menu/beautiful/3.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+
+
+
+/* end cake menu */
+
+
+
+
+
+/* cake menu */
+
+.coffee-menu{
+	margin-top: 140px;
+}
+
+.coffee-menu .title{
+	text-align: center;
+	padding: 50px 50px;
+}
+
+.coffee-menu .title h1{
+	font-family: 'Great Vibes';
+	font-size: 60px;
+}
+
+.coffee-menu .title p{
+	font-family: 'tahoma';
+	font-size: 14px;
+}
+
+.coffee-menu .controller{
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+.coffee-menu .controller div{
+	text-decoration: none;
+	color: #fff;
+	background: #ff99cc;
+	font-family: 'tahoma';
+	font-size: 14px;
+	margin: 0 5px;
+	width: 100px;
+	cursor: pointer;
+	padding: 10px 0;
+	border: 1px solid #3333;
+	transition: .5s;
+}
+
+.coffee-menu .controller div:hover{
+	background: #333;
+}
+
+.coffee-menu .menu{
+	padding: 50px 50px;
+	display: grid;
+	grid-template-columns: repeat(6,1fr);
+	grid-gap: 30px 30px;
+}
+
+@media screen and (max-width: 1023px){
+	.coffee-menu .menu{
+		grid-template-columns: repeat(3,1fr);
+	}
+}
+
+@media screen and (max-width: 768px){
+	.coffee-menu .menu{
+		grid-template-columns: repeat(1,1fr);
+	}
+}
+
+
+
+.coffee-menu .menu .coffee-menu-1,
+.coffee-menu .menu .coffee-menu-2,
+.coffee-menu .menu .coffee-menu-3,
+.coffee-menu .menu .coffee-menu-4,
+.coffee-menu .menu .coffee-menu-5,
+.coffee-menu .menu .coffee-menu-6,
+.coffee-menu .menu .coffee-menu-7,
+.coffee-menu .menu .coffee-menu-8,
+.coffee-menu .menu .coffee-menu-9,
+.coffee-menu .menu .coffee-menu-10{
+	box-shadow: 0 2px 5px rgba(0,0,0,.3);
+	cursor: pointer;
+	transition: .5s;
+}
+
+.coffee-menu .menu .coffee-menu-1:hover,
+.coffee-menu .menu .coffee-menu-2:hover,
+.coffee-menu .menu .coffee-menu-3:hover,
+.coffee-menu .menu .coffee-menu-4:hover,
+.coffee-menu .menu .coffee-menu-5:hover,
+.coffee-menu .menu .coffee-menu-6:hover,
+.coffee-menu .menu .coffee-menu-7:hover,
+.coffee-menu .menu .coffee-menu-8:hover,
+.coffee-menu .menu .coffee-menu-9:hover,
+.coffee-menu .menu .coffee-menu-10:hover{
+	box-shadow: 0 5px 50px rgba(0,0,0,.3);
+}
+
+
+
+.coffee-menu .menu .coffee-menu-1 .name,
+.coffee-menu .menu .coffee-menu-2 .name,
+.coffee-menu .menu .coffee-menu-3 .name,
+.coffee-menu .menu .coffee-menu-4 .name,
+.coffee-menu .menu .coffee-menu-5 .name,
+.coffee-menu .menu .coffee-menu-6 .name,
+.coffee-menu .menu .coffee-menu-7 .name,
+.coffee-menu .menu .coffee-menu-8 .name,
+.coffee-menu .menu .coffee-menu-9 .name,
+.coffee-menu .menu .coffee-menu-10 .name{
+	padding: 20px 20px;
+	text-align: center;
+	background: #fff;
+}
+
+.coffee-menu .menu .coffee-menu-1 .name h1,
+.coffee-menu .menu .coffee-menu-2 .name h1,
+.coffee-menu .menu .coffee-menu-3 .name h1,
+.coffee-menu .menu .coffee-menu-4 .name h1,
+.coffee-menu .menu .coffee-menu-5 .name h1,
+.coffee-menu .menu .coffee-menu-6 .name h1,
+.coffee-menu .menu .coffee-menu-7 .name h1,
+.coffee-menu .menu .coffee-menu-8 .name h1,
+.coffee-menu .menu .coffee-menu-9 .name h1,
+.coffee-menu .menu .coffee-menu-10 .name h1{
+	font-family: 'Great Vibes';
+	font-size: 20px;
+}
+
+.coffee-menu .menu .coffee-menu-1 .name p,
+.coffee-menu .menu .coffee-menu-2 .name p,
+.coffee-menu .menu .coffee-menu-3 .name p,
+.coffee-menu .menu .coffee-menu-4 .name p,
+.coffee-menu .menu .coffee-menu-5 .name p,
+.coffee-menu .menu .coffee-menu-6 .name p,
+.coffee-menu .menu .coffee-menu-7 .name p,
+.coffee-menu .menu .coffee-menu-8 .name p,
+.coffee-menu .menu .coffee-menu-9 .name p,
+.coffee-menu .menu .coffee-menu-10 .name p{
+	font-family: 'tahoma';
+	font-size: 14px;
+	color: #ff99cc;
+}
+
+
+
+
+
+
+.coffee-menu .menu .coffee-menu-1 .img{
+	background: url(../images/coffee-menu/americano/1.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+.coffee-menu .menu .coffee-menu-2 .img{
+	background: url(../images/coffee-menu/americano/2.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+.coffee-menu .menu .coffee-menu-3 .img{
+	background: url(../images/coffee-menu/americano/3.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+.coffee-menu .menu .coffee-menu-4 .img{
+	background: url(../images/coffee-menu/americano/4.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+
+.coffee-menu .menu .coffee-menu-5 .img{
+	background: url(../images/coffee-menu/americano/5.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+
+.coffee-menu .menu .coffee-menu-6 .img{
+	background: url(../images/coffee-menu/late/1.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+.coffee-menu .menu .coffee-menu-7 .img{
+	background: url(../images/coffee-menu/late/1.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+.coffee-menu .menu .coffee-menu-8 .img{
+	background: url(../images/coffee-menu/late/3.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+.coffee-menu .menu .coffee-menu-9 .img{
+	background: url(../images/coffee-menu/late/4.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+.coffee-menu .menu .coffee-menu-10 .img{
+	background: url(../images/coffee-menu/late/5.jpg);
+	width: 100%;
+	height: 100px;
+	background-size: cover;
+	background-position: center;
+}
+
+
+
+/* end cake menu */
+
+
+
+
+
+
+
+
+
+
+
